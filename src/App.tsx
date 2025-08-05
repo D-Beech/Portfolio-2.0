@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
 import heroImg from '../src/assets/hero_image.jpg';
 import headshot from '../src/assets/headshot.jpg';
 import './App.css';
 
 "use client";
 
-function scrollToSection(id) {
+function scrollToSection(id: string) {
   const el = document.getElementById(id);
   if (!el) return;
   const yOffset = -80; // Adjust for navbar height
@@ -31,8 +30,6 @@ function Contact() {
 }
 
 function ProductCard({ name = "", description = "", link_to = "#" }) {
-
-  const creamBgColor = "#FAF3E0";
   return (
     <div
       className="
@@ -75,9 +72,7 @@ function ProductCard({ name = "", description = "", link_to = "#" }) {
 }
 
 export default function Portfolio() {
-  // Change these colors here for all light and dark backgrounds
   const lightBgColor = "#e6e6e6ff"; // light grayish white (instead of pure white)
-  const darkBgColor = "#f0f0f0";  // slightly darker light background for dark mode
 
   const projects = [
     {
@@ -123,8 +118,6 @@ export default function Portfolio() {
       link_to: "#"
     },
   ];
-
-
 
   return (
     <div
@@ -178,7 +171,7 @@ export default function Portfolio() {
         style={{ backgroundColor: lightBgColor }}
       >
         <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
+          <div className="flex justify-center hover:scale-105 transform transition duration-300 ease-in-out p-6">
             <img
               src={headshot}
               alt="Photo of Datu"
@@ -189,23 +182,35 @@ export default function Portfolio() {
             <h3 className="text-2xl font-bold mb-4 text-gray-900">
               About Me
             </h3>
-            <p className="text-gray-700">
+
+            <p className="text-gray-700 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:-rotate-1">
               I'm a Full Stack Developer, currently based in Wellington NZ, with a special love for the backend and everything cloud-related!
-              <br /><br />
-              I love building modern, responsive frontends in React, and I'm comfortable building web servers, buisness logic and robust APIs with whatever framework suits the job best!
-              <br /><br />
+            </p>
+            <br />
+            <p className="text-gray-700 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:-rotate-1">
+              I love building modern, responsive frontends in React, and I'm comfortable building web servers, business logic and robust APIs with whatever framework suits the job best!
+            </p>
+            <br />
+            <p className="text-gray-700 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:-rotate-1">
               I love JavaScript, and I've made some cool things with C# and APEX, but Python is without a doubt my favourite language. For my current work I'm using Flask to explore data and build AI-powered apps with custom guardrails, natural language processing, and voice user interfaces (VUI).
-              <br /><br />I'm not just making chatbots! Specilaized, privacy-foccussed tools which make boring but important tasks like health tracking and data visualization easier for non-technical people.
-              <br /><br />
+            </p>
+            <br />
+            <p className="text-gray-700 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:-rotate-1">
+              I'm not just making chatbots! Specialized, privacy-focused tools which make boring but important tasks like health tracking and data visualization easier for non-technical people.
+            </p>
+            <br />
+            <p className="text-gray-700 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:-rotate-1">
               I love building cool things, solving interesting problems, and working with great people.
-              <br /><br />
+            </p>
+            <br />
+            <p className="text-gray-700 transition-transform duration-300 ease-in-out hover:translate-x-1 hover:-rotate-1">
               In my spare time, you'll find me training handstands, playing emo music, and working the occasional barista shift.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Projects Section with parallax background */}
+      {/* Projects Section */}
       <section
         id="projects"
         className="bg-fixed bg-cover bg-center"
@@ -246,4 +251,3 @@ export default function Portfolio() {
     </div>
   );
 }
-
