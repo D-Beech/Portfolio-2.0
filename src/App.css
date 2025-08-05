@@ -1,22 +1,40 @@
 @import "tailwindcss";
 
-@keyframes spinAround {
-  0% {
-    transform: rotate(0deg) translateX(200px) rotate(0deg);
+/* typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #ccc }
+}
+
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #ccc;
+  width: fit-content;
+  animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
+}
+
+/* fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  100% {
-    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.spin-around {
-  animation: spinAround 10s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center center;
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-html {
-  scroll-behavior: smooth;
+.animate-fadeInUp.delay-400 {
+  animation-delay: 0.4s;
 }
