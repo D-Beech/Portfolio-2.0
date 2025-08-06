@@ -121,21 +121,15 @@ export default function Portfolio() {
 
   return (
     <div
-      className="font-sans text-gray-900 dark:text-gray-900"
+      className="font-sans text-gray-900 dark:text-gray-900 overflow-x-hidden"
       style={{ backgroundColor: lightBgColor }}
       data-theme="light"
     >
+
       {/* Navbar */}
-      <header
-        className="shadow-md sticky top-0 z-20"
-        style={{ backgroundColor: lightBgColor }}
-      >
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          <h1 className="text-3xl font-extrabold text-gray-800 tracking-wide cursor-pointer">
-            Datu Beech
-            <span className="text-gray-500 font-normal block text-sm">Software Developer</span>
-          </h1>
-          <nav className="space-x-10 text-lg font-medium text-gray-700">
+      <header className="sticky top-0 z-50 bg-[#e6e6e6] shadow-md">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-center">
+          <nav className="flex gap-8 text-lg font-medium text-gray-700">
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-600 transition">About</button>
             <button onClick={() => scrollToSection('projects')} className="hover:text-blue-600 transition">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-blue-600 transition">Contact</button>
@@ -149,20 +143,30 @@ export default function Portfolio() {
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white drop-shadow-xl animate-fadeInUp">
+          <h1
+            className="text-5xl md:text-7xl font-extrabold text-white drop-shadow-xl opacity-0 animate-fadeIn"
+            style={{ animationDelay: '0s' }}
+          >
             Datu Beech
           </h1>
-          <p className="mt-4 text-lg md:text-2xl text-gray-300 tracking-wide whitespace-nowrap overflow-hidden border-r-4 border-gray-300 w-fit animate-typing">
-            Full Stack Developer | Voice UI + AI Research | Cloud Nerd
+
+          <p
+            className="mt-4 max-w-xl text-lg md:text-2xl text-gray-300 tracking-wide opacity-0 animate-fadeIn whitespace-normal"
+            style={{ animationDelay: '0.5s' }}
+          >
+            Full Stack Developer<br /><br />Building for the real world with VUI & Cloud
           </p>
-          <a
-            href="#projects"
-            className="mt-8 inline-block px-6 py-3 text-sm md:text-base font-medium text-white bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full shadow-lg hover:scale-105 transition duration-300 animate-fadeInUp delay-400"
+
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="mt-8 inline-block px-6 py-3 text-sm md:text-base font-medium text-white bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full shadow-lg hover:scale-105 transition duration-300 opacity-0 animate-fadeIn"
+            style={{ animationDelay: '1s' }}
           >
             View My Work ↓
-          </a>
+          </button>
         </div>
       </section>
+
 
       {/* About Section */}
       <section
