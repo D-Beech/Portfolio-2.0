@@ -94,21 +94,21 @@ export default function Portfolio() {
       name: "EduBot – Private Text Inference Tool for Schools",
       description:
         "Private chatbot with summarization and moderation via guardrails. Uses Llama 3.2 hosted on AWS, proving private AI is affordable.",
-      link_to: "#"
+      link_to: "https://github.com/D-Beech/301.3_Llama_Flask_Interface"
     },
     {
       id: 3,
       name: "Super Checker – Grocery Price Comparator",
       description:
-        "Flask + BeautifulSoup + Chromium scraper to compare supermarket prices across Wellington. Hosted on AWS.",
-      link_to: "#"
+        "Django + BeautifulSoup + Chromium scraper to compare supermarket prices across Wellington. Hosted on AWS.",
+      link_to: "https://github.com/D-Beech/Django_Application_205_Backend.git"
     },
     {
       id: 4,
       name: "Ted’s Bar – eCommerce Website",
       description:
         "Stripe-integrated Flask eCommerce site with PostgreSQL DB. Deployed on AWS.",
-      link_to: "#"
+      link_to: "https://github.com/D-Beech/Ted-sBar_V2"
     },
     {
       id: 5,
@@ -122,7 +122,7 @@ export default function Portfolio() {
       name: "New Chapter Website",
       description:
         "Quick static SEO-friendly site built and hosted affordably for a local business.",
-      link_to: "#"
+      link_to: "https://cafenewchapter.com/"
     },
   ];
 
