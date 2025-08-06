@@ -7,10 +7,17 @@ import './App.css';
 function scrollToSection(id: string) {
   const el = document.getElementById(id);
   if (!el) return;
-  const yOffset = -80; // Adjust for navbar height
-  const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  // Find the navbar element (assuming it has id or ref, or use a class selector)
+  const navbar = document.querySelector('header'); // or more specific selector if needed
+  const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+
+  // Calculate scroll position offset by navbar height
+  const y = el.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
   window.scrollTo({ top: y, behavior: 'smooth' });
 }
+
 
 function Contact() {
   return (
@@ -127,7 +134,7 @@ export default function Portfolio() {
     >
 
       {/* Navbar */}
-      <header className="sticky top-0 z-50 bg-[#e6e6e6] shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-center">
           <nav className="flex gap-8 text-lg font-medium text-gray-700">
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-600 transition">About</button>
@@ -136,6 +143,7 @@ export default function Portfolio() {
           </nav>
         </div>
       </header>
+
 
       {/* Hero Section */}
       <section
