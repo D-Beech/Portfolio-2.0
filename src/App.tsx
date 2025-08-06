@@ -48,7 +48,7 @@ function ProductCard({ name = "", description = "", link_to = "#" }) {
     >
       <h4 className="text-2xl font-semibold text-gray-800 mb-3">{name}</h4>
       <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
-      <a
+      {/* <a
         href={link_to}
         target="_blank"
         rel="noopener noreferrer"
@@ -66,7 +66,7 @@ function ProductCard({ name = "", description = "", link_to = "#" }) {
         "
       >
         View Project →
-      </a>
+      </a> */}
     </div>
   );
 }
