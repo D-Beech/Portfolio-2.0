@@ -1,20 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/programming.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datu Beech | Data & AI Intern at DataTorque</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <meta name="description" content="Datu Beech - Data & AI Intern at DataTorque specializing in RAG systems, Langchain, ethical AI, and full-stack development. Building solutions that protect data and safety.">
-    <meta name="keywords" content="Data & AI Intern, RAG Systems, Langchain, Ethical AI, Full Stack Developer, React, Python, DataTorque, Web Development, Portfolio">
-    <meta name="author" content="Datu Beech">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Datu Beech | Software Developer Wellington NZ</title>
+
+    <meta
+        name="description"
+        content="Datu Beech is a developer based in Wellington, New Zealand."
+    >
+
+    <meta name="author" content="Datu Beech">
+
+ 
+    <meta name="theme-color" content="#000000">
+
+  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            font-family: Georgia, serif;
+            color: white;
+        }
+
+        main {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url("static/images/nice-view.JPG");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+
+        .line {
+            width: min(450px, 80%);
+            height: 1px;
+            margin: 0 auto 2rem auto;
+            background: rgba(255,255,255,0.4);
+        }
+
+        nav {
+            margin-bottom: 1.5rem;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            font-family: system-ui, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.9;
+            transition: opacity 0.2s ease;
+        }
+
+        .links a:hover {
+            opacity: 1;
+        }
+
+        .links a:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 4px;
+        }
+
+        .subtitle {
+            font-family: system-ui, sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 600px) {
+            .links {
+                gap: 1rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main>
+    <section
+        class="content"
+        aria-label="Personal introduction"
+    >
+        <h1>Datu Beech</h1>
+
+        <div
+            class="line"
+            aria-hidden="true"
+        ></div>
+
+        <nav aria-label="Social links">
+            <div class="links">
+
+                <a
+                    href="https://github.com/d-beech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Datu Beech's GitHub profile"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://linkedin.com/in/datu-beech"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Datu Beech's LinkedIn profile"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+        </nav>
+
+        <p class="subtitle">
+            Dev, Wellington NZ
+        </p>
+
+    </section>
+</main>
+
+</body>
+</html>
