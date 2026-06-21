@@ -6,17 +6,16 @@
 
     <title>Datu Beech | Software Developer Wellington NZ</title>
 
-    <meta
-        name="description"
-        content="Datu Beech is a developer based in Wellington, New Zealand."
-    >
-
+    <meta name="description" content="Datu Beech is a developer based in Wellington, New Zealand.">
     <meta name="author" content="Datu Beech">
-
- 
     <meta name="theme-color" content="#000000">
 
-  
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Special+Elite&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -24,13 +23,12 @@
             box-sizing: border-box;
         }
 
-        html {
+        html, body {
             height: 100%;
         }
 
         body {
-            min-height: 100%;
-            font-family: Georgia, serif;
+            font-family: 'Inter', system-ui, sans-serif;
             color: white;
         }
 
@@ -38,10 +36,7 @@
             min-height: 100vh;
 
             background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.35),
-                    rgba(0, 0, 0, 0.35)
-                ),
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
                 url("static/images/nice-view.JPG");
 
             background-size: cover;
@@ -62,18 +57,19 @@
         }
 
         h1 {
-            font-size: clamp(4rem, 10vw, 8rem);
+            font-size: clamp(3.5rem, 9vw, 7rem);
             font-weight: 400;
+            letter-spacing: -1px;
             line-height: 1;
             margin-bottom: 1.5rem;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 25px rgba(0,0,0,0.6);
         }
 
         .line {
             width: min(450px, 80%);
             height: 1px;
             margin: 0 auto 2rem auto;
-            background: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.35);
         }
 
         nav {
@@ -90,10 +86,8 @@
         .links a {
             color: white;
             text-decoration: none;
-            font-family: system-ui, sans-serif;
-            font-size: 1.1rem;
-            font-weight: 400;
-            opacity: 0.9;
+            font-size: 1.05rem;
+            opacity: 0.85;
             transition: opacity 0.2s ease;
         }
 
@@ -107,7 +101,7 @@
         }
 
         .subtitle {
-            font-family: system-ui, sans-serif;
+            font-family: 'Special Elite', monospace;
             font-size: 1rem;
             letter-spacing: 1px;
             opacity: 0.85;
@@ -119,7 +113,7 @@
             }
 
             .subtitle {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
         }
 
@@ -136,43 +130,26 @@
 <body>
 
 <main>
-    <section
-        class="content"
-        aria-label="Personal introduction"
-    >
+    <section class="content" aria-label="Personal introduction">
+
         <h1>Datu Beech</h1>
 
-        <div
-            class="line"
-            aria-hidden="true"
-        ></div>
+        <div class="line" aria-hidden="true"></div>
 
         <nav aria-label="Social links">
             <div class="links">
-
-                <a
-                    href="https://github.com/d-beech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Datu Beech's GitHub profile"
-                >
+                <a href="https://github.com/d-beech" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </a>
 
-                <a
-                    href="https://linkedin.com/in/datu-beech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Datu Beech's LinkedIn profile"
-                >
+                <a href="https://linkedin.com/in/datu-beech" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                 </a>
-
             </div>
         </nav>
 
         <p class="subtitle">
-            Dev, Wellington New Zealand
+            Developer · Wellington, NZ 
         </p>
 
     </section>
